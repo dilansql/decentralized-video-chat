@@ -12,9 +12,11 @@
       src="https://kit.fontawesome.com/9d7bb7e31a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="/js/jquery.ui.touch-punch.js"></script>
+    <script src="/js/myfunctions.js"></script>
     <meta property="og:title" content="Join your friends call - Zipcall" />
     <meta
       property="og:description"
@@ -53,6 +55,12 @@
       <video id="local-video" autoplay muted playsinline></video>
     </div>
 
+    <div id="moveable">
+      <div id="Background">
+        <div id="Square" class="square el"></div>
+      </div>
+    </div>
+
     <div id="entire-chat">
       <div id="chat-zone">
         <div class="chat-messages"></div>
@@ -76,6 +84,20 @@
       <!--        </button>-->
       <!--        <div class="HoverState">Fullscreen</div>-->
       <!--      </div>-->
+
+      <div class="buttonContainer">
+        <button class="hoverButton" onclick="{Stop()}">
+          <i class="fas fa-pause fa-xs" id="pause-icon"></i>
+        </button>
+        <div class="HoverState" id="pause-text">Pause EMDR Animation</div>
+      </div>
+
+      <div class="buttonContainer">
+        <button class="hoverButton" onclick="{SquareAnimation()}">
+          <i class="fas fa-play fa-xs" id="startanimation-icon"></i>
+        </button>
+        <div class="HoverState" id="startanimation-text">Begin EMDR Animation</div>
+      </div>
 
       <div class="buttonContainer">
         <button class="hoverButton" onclick="{pauseVideo()}">
