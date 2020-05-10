@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/59175b81-4c93-4daa-ab24-c608bc87c849/resourceGroups/Web_EMDR/providers/Microsoft.Web/sites/WebEMDRProd",
+    "appService.deploySubpath": ""
+}
